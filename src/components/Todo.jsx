@@ -4,7 +4,7 @@
 import TodoItem from "./TodoItem"
 
 // eslint-disable-next-line react/prop-types
-const Todo = ({ todos, toggleCompleted }) => {
+const Todo = ({ todos, toggleCompleted, deleteTodo }) => {
     return (
         <div style={styles.container}>
             {todos.map((todo) => {
@@ -12,6 +12,7 @@ const Todo = ({ todos, toggleCompleted }) => {
                             key={todo.id} 
                             todo={todo} 
                             toggleCompleted={toggleCompleted}
+                            deleteTodo={deleteTodo}
                         />
             })}
         </div>
